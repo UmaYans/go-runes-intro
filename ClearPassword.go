@@ -6,10 +6,9 @@ import (
 )
 
 func ClearPassword(s string) string {
-	runes := []rune(s)
 	result := ""
 
-	for _, r := range runes {
+	for _, r := range s {
 		if unicode.IsSpace(r) || unicode.IsControl(r) {
 		} else {
 			result += strings.ToUpper(string(r))
